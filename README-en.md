@@ -18,6 +18,7 @@ directions, and CEFR levels can be added without duplicating the whole system.
 | --- | --- | --- | --- |
 | `zh-TW → pt-PT`, A1 | Done | Target language, language pair, direction + level | — |
 | `zh-TW → en-US`, B2 | Done | Target language, language pair, direction + level | — |
+| `zh-TW → de-DE`, B1 | Done | Target language, language pair, direction + level | — |
 
 The shared CEFR policies (A1–C2) are in place; no other configurations are scheduled yet.
 
@@ -53,7 +54,7 @@ shared pedagogy + shared policies + CEFR policy
 | Pedagogy | `shared/pedagogy/` | Language-independent teaching: correction, retrieval, spaced review, error taxonomy, session flow |
 | CEFR level | `shared/cefr/` (`a1.md`–`c2.md`) | Difficulty, scaffolding, output size, and amount of new material per session, per level |
 | Policies | `shared/policies/` | Source integrity, language-comparison rules |
-| Target language | `languages/<language-code>.md` (`pt-PT`, `en-US`, `zh-TW`) | Grammar, vocabulary, pronunciation, and regional-variety guardrails (e.g. PT-PT vs PT-BR, en-US vs en-GB) |
+| Target language | `languages/<language-code>.md` (`pt-PT`, `en-US`, `de-DE`, `zh-TW`) | Grammar, vocabulary, pronunciation, and regional-variety guardrails (e.g. PT-PT vs PT-BR, en-US vs en-GB) |
 | Language pair | `language-pairs/<A>__<B>.md` | Bidirectional contrasts and transfer risks |
 | Direction + level | `skills/<direction>/<level>/level-policy.md` | Explanation language, textbook or text pacing (per the CEFR level policy), date header, recap |
 
@@ -135,16 +136,21 @@ learn-langs-skills/
 ├── languages/
 │   ├── pt-PT.md
 │   ├── zh-TW.md
-│   └── en-US.md
+│   ├── en-US.md
+│   └── de-DE.md
 ├── language-pairs/
 │   ├── zh-TW__pt-PT.md
-│   └── zh-TW__en-US.md
+│   ├── zh-TW__en-US.md
+│   └── zh-TW__de-DE.md
 └── skills/
     ├── zh-TW-to-pt-PT/
     │   └── a1/
     │       └── level-policy.md
-    └── zh-TW-to-en-US/
-        └── b2/
+    ├── zh-TW-to-en-US/
+    │   └── b2/
+    │       └── level-policy.md
+    └── zh-TW-to-de-DE/
+        └── b1/
             └── level-policy.md
 ```
 

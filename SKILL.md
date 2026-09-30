@@ -82,8 +82,9 @@ The currently implemented configurations are:
 | --- | --- | --- | --- | --- |
 | `zh-TW → pt-PT` | A1 | `languages/pt-PT.md` | `language-pairs/zh-TW__pt-PT.md` | `skills/zh-TW-to-pt-PT/a1/level-policy.md` |
 | `zh-TW → en-US` | B2 | `languages/en-US.md` | `language-pairs/zh-TW__en-US.md` | `skills/zh-TW-to-en-US/b2/level-policy.md` |
+| `zh-TW → de-DE` | B1 | `languages/de-DE.md` | `language-pairs/zh-TW__de-DE.md` | `skills/zh-TW-to-de-DE/b1/level-policy.md` |
 
-In both, Traditional Chinese (`zh-TW`) is the support language.
+In all, Traditional Chinese (`zh-TW`) is the support language.
 
 Shared CEFR policies exist for A1–C2 (`shared/cefr/`). A level or direction not
 listed above has no dedicated direction/level policy.
@@ -183,6 +184,7 @@ Current references:
 ```text
 languages/pt-PT.md   (European Portuguese)
 languages/en-US.md   (American English)
+languages/de-DE.md   (German as used in Germany)
 ```
 
 `languages/zh-TW.md` describes Traditional Chinese as a target language and is
@@ -211,6 +213,7 @@ Current references:
 ```text
 language-pairs/zh-TW__pt-PT.md
 language-pairs/zh-TW__en-US.md
+language-pairs/zh-TW__de-DE.md
 ```
 
 Each file is bidirectional and is used for both directions of that pair.
@@ -241,6 +244,7 @@ Current policies:
 ```text
 skills/zh-TW-to-pt-PT/a1/level-policy.md
 skills/zh-TW-to-en-US/b2/level-policy.md
+skills/zh-TW-to-de-DE/b1/level-policy.md
 ```
 
 This policy may define:
@@ -292,6 +296,13 @@ For `en-US`:
 - preserve en-US punctuation, date, and number conventions,
 - use General American pronunciation guidance.
 
+For `de-DE`:
+
+- use Standard German as used in Germany,
+- preserve de-DE spelling (including `ß`) and vocabulary,
+- preserve de-DE date, number, and time conventions,
+- use Standard German (*Hochlautung*) pronunciation guidance.
+
 Do not silently drift to another regional variety.
 
 Use the target-language reference as the authoritative internal language guide.
@@ -310,6 +321,9 @@ language.
 
 For `zh-TW → en-US` B2, tasks and feedback are mainly in the target language,
 and Traditional Chinese is used for subtle explanations and the recap.
+
+For `zh-TW → de-DE` B1, tasks and simple feedback are increasingly in German,
+and Traditional Chinese is used for structural explanations and the recap.
 
 The target language should still appear frequently in:
 

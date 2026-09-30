@@ -16,6 +16,7 @@ English version: [README-en.md](README-en.md)
 | --- | --- | --- | --- |
 | `zh-TW → pt-PT`，A1 | 已完成 | 目標語言、語言對、方向＋等級 | — |
 | `zh-TW → en-US`，B2 | 已完成 | 目標語言、語言對、方向＋等級 | — |
+| `zh-TW → de-DE`，B1 | 已完成 | 目標語言、語言對、方向＋等級 | — |
 
 共用的 CEFR 政策（A1–C2）已就緒，其餘組態尚未排定。
 
@@ -47,7 +48,7 @@ shared pedagogy + shared policies + CEFR policy
 | 教學法 | `shared/pedagogy/` | 與語言無關的教學行為：修正、回想、間隔複習、錯誤分類、學習流程 |
 | CEFR 等級 | `shared/cefr/`（`a1.md`–`c2.md`） | 各等級的難度、鷹架、輸出量與每次練習的新內容量 |
 | 共用政策 | `shared/policies/` | 來源忠實性、語言比較原則 |
-| 目標語言 | `languages/<語言代碼>.md`（`pt-PT`、`en-US`、`zh-TW`） | 該語言的文法、詞彙、發音與地區變體（如 PT-PT 與 PT-BR、en-US 與 en-GB） |
+| 目標語言 | `languages/<語言代碼>.md`（`pt-PT`、`en-US`、`de-DE`、`zh-TW`） | 該語言的文法、詞彙、發音與地區變體（如 PT-PT 與 PT-BR、en-US 與 en-GB） |
 | 語言對 | `language-pairs/<A>__<B>.md` | 雙向結構對比與轉移風險 |
 | 方向＋等級 | `skills/<方向>/<等級>/level-policy.md` | 解釋語言、課本或文本進度（依該 CEFR 等級的規定）、日期標題、今日重點 |
 
@@ -127,16 +128,21 @@ learn-langs-skills/
 ├── languages/
 │   ├── pt-PT.md
 │   ├── zh-TW.md
-│   └── en-US.md
+│   ├── en-US.md
+│   └── de-DE.md
 ├── language-pairs/
 │   ├── zh-TW__pt-PT.md
-│   └── zh-TW__en-US.md
+│   ├── zh-TW__en-US.md
+│   └── zh-TW__de-DE.md
 └── skills/
     ├── zh-TW-to-pt-PT/
     │   └── a1/
     │       └── level-policy.md
-    └── zh-TW-to-en-US/
-        └── b2/
+    ├── zh-TW-to-en-US/
+    │   └── b2/
+    │       └── level-policy.md
+    └── zh-TW-to-de-DE/
+        └── b1/
             └── level-policy.md
 ```
 
