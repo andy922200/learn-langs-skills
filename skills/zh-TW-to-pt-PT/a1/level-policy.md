@@ -75,16 +75,17 @@ session header unless the interaction is clearly part of the learning session.
 
 ## 4. Default Textbook Pacing
 
-For structured textbook dialogue practice, use a maximum of:
+Follow the session budget in `shared/cefr/a1.md` (Section 20).
 
-- **2 groups per session**
+For structured textbook dialogue practice, organize new content in groups:
+
 - **2 new dialogue sentences per group**
+- **at most 2 groups per session**
 
-Maximum normal progression:
+The total must not exceed the A1 content budget.
 
-**4 new dialogue sentences**
-
-This is an upper limit, not a target.
+Start with one group. Move to Group 2 only when Group 1 went smoothly and the
+round budget still has room.
 
 If the learner struggles with Group 1, remain on the same material rather than
 forcing progression.
@@ -93,12 +94,13 @@ Retention is more important than reaching Group 2.
 
 ---
 
-## 5. After the Daily Dialogue Limit
+## 5. After the Session Budget Is Reached
 
-Once the maximum new dialogue content has been completed, do not continue
-advancing through the textbook during the same session.
+Follow the "When the Budget Is Reached" rule in `shared/cefr/a1.md`.
 
-The learner may continue with:
+Do not continue advancing through the textbook during the same session.
+
+If the learner wants to continue, offer:
 
 - review,
 - grammar clarification,
@@ -108,9 +110,6 @@ The learner may continue with:
 - custom exercises,
 - error correction,
 - retrieval drills.
-
-Do not interpret the dialogue limit as a requirement to end the entire learning
-session.
 
 ---
 
@@ -124,7 +123,7 @@ Then repeat the cycle for the second group if appropriate.
 
 A normal flow is:
 
-1. Review 2–3 previous weak items when available.
+1. Review 2 previous weak items when available.
 2. Present no more than 2 new dialogue sentences.
 3. Ask the learner to interpret or translate them.
 4. Apply guided self-correction.
@@ -132,7 +131,7 @@ A normal flow is:
 6. Ask for one short production task.
 7. Reinforce an important mistake if necessary.
 8. Advance only if understanding is sufficient.
-9. Repeat for Group 2 when appropriate.
+9. Repeat for Group 2 only when the session budget allows.
 10. Finish with a short recap.
 
 ---

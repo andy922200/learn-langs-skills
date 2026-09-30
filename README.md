@@ -41,11 +41,11 @@ shared pedagogy + shared policies + CEFR policy
 | --- | --- | --- |
 | 進入點<br>Entry point | `SKILL.md` | 判斷組態、導向參考檔、定義規則優先順序<br>Detect configuration, route to references, define rule priority |
 | 教學法<br>Pedagogy | `shared/pedagogy/` | 與語言無關的教學行為：修正、回想、間隔複習、錯誤分類、學習流程<br>Language-independent teaching: correction, retrieval, spaced review, error taxonomy, session flow |
-| CEFR 等級<br>CEFR level | `shared/cefr/a1.md` | 各等級的難度、鷹架與輸出量<br>Difficulty, scaffolding, and output size per level |
+| CEFR 等級<br>CEFR level | `shared/cefr/a1.md` | 各等級的難度、鷹架、輸出量與每次練習的新內容量<br>Difficulty, scaffolding, output size, and amount of new material per session, per level |
 | 共用政策<br>Policies | `shared/policies/` | 來源忠實性、語言比較原則<br>Source integrity, language-comparison rules |
 | 目標語言<br>Target language | `languages/pt-PT.md` | PT-PT 文法、詞彙、發音，並與 PT-BR 區隔<br>PT-PT grammar, vocabulary, pronunciation; PT-BR guardrails |
 | 語言對<br>Language pair | `language-pairs/zh-TW__pt-PT.md` | 雙向結構對比與轉移風險<br>Bidirectional contrasts and transfer risks |
-| 方向＋等級<br>Direction + level | `skills/zh-TW-to-pt-PT/a1/level-policy.md` | 解釋語言、課本進度（每日最多 4 句新對話）、日期標題、今日重點<br>Explanation language, textbook pacing (max 4 new lines/day), date header, recap |
+| 方向＋等級<br>Direction + level | `skills/zh-TW-to-pt-PT/a1/level-policy.md` | 解釋語言、課本進度（依該 CEFR 等級的規定）、日期標題、今日重點<br>Explanation language, textbook pacing (per the CEFR level policy), date header, recap |
 
 ---
 
