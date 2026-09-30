@@ -1,4 +1,3 @@
-```md
 # European Portuguese (pt-PT)
 
 Shared language reference for **European Portuguese (Português Europeu / PT-PT)**.
@@ -796,4 +795,3 @@ Prefer:
 over:
 
 **excessive theory + mixed varieties + false absolute rules**
-```
