@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # 打包 learn-langs-skills-[YYYY-MM-DD-HH-mm-ss].zip
 # 僅收錄 INCLUDES 內的項目，並排除所有隱藏檔（.git/.claude/.DS_Store 等）
+# README.md、README-en.md、docs/ 不在 INCLUDES 內，因此不會被打包
 set -euo pipefail
 
 cd "$(dirname "$0")"
