@@ -76,17 +76,17 @@ Do not repeatedly ask the learner to specify information that is already known.
 
 ## 3. Supported Configuration
 
-The currently implemented primary configuration is:
+The currently implemented configurations are:
 
-```text
-zh-TW → pt-PT
-CEFR A1
-```
+| Direction | Level | Target language | Language pair | Direction/level policy |
+| --- | --- | --- | --- | --- |
+| `zh-TW → pt-PT` | A1 | `languages/pt-PT.md` | `language-pairs/zh-TW__pt-PT.md` | `skills/zh-TW-to-pt-PT/a1/level-policy.md` |
+| `zh-TW → en-US` | B2 | `languages/en-US.md` | `language-pairs/zh-TW__en-US.md` | `skills/zh-TW-to-en-US/b2/level-policy.md` |
 
-Use:
+In both, Traditional Chinese (`zh-TW`) is the support language.
 
-- Traditional Chinese (`zh-TW`) as the primary support language,
-- European Portuguese (`pt-PT`) as the target language.
+Shared CEFR policies exist for A1–C2 (`shared/cefr/`). A level or direction not
+listed above has no dedicated direction/level policy.
 
 Do not claim that an unimplemented language/level combination has dedicated
 policies unless the corresponding references exist.
@@ -146,13 +146,16 @@ These policies apply across all supported languages and levels.
 
 ### 4.3 CEFR Level
 
-Load the policy matching the learner's current CEFR level.
-
-For A1:
+Load the policy matching the learner's current CEFR level:
 
 ```text
-shared/cefr/a1.md
+shared/cefr/<level>.md
 ```
+
+For example, `shared/cefr/a1.md` or `shared/cefr/b2.md`.
+
+Apply only the active level. Do not apply lower-level rules (such as A1
+sentence drills) to a higher-level learner.
 
 CEFR policies control:
 
@@ -169,13 +172,21 @@ Do not treat CEFR policies as language-specific grammar references.
 
 ### 4.4 Target Language
 
-Load the reference for the target language.
-
-For European Portuguese:
+Load the reference for the target language:
 
 ```text
-languages/pt-PT.md
+languages/<target-language-code>.md
 ```
+
+Current references:
+
+```text
+languages/pt-PT.md   (European Portuguese)
+languages/en-US.md   (American English)
+```
+
+`languages/zh-TW.md` describes Traditional Chinese as a target language and is
+used when `zh-TW` is the language being learned.
 
 Target-language references define:
 
@@ -195,11 +206,14 @@ usage in that language.
 When a contrastive reference exists for the learner/support language and target
 language, apply it.
 
-For Traditional Chinese and European Portuguese:
+Current references:
 
 ```text
 language-pairs/zh-TW__pt-PT.md
+language-pairs/zh-TW__en-US.md
 ```
+
+Each file is bidirectional and is used for both directions of that pair.
 
 Language-pair references define:
 
@@ -216,12 +230,17 @@ Actual learner performance should determine correction and review priority.
 
 ### 4.6 Direction and Level Policy
 
-Finally, apply the policy matching both learning direction and level.
+Finally, apply the policy matching both learning direction and level:
 
-For the current primary configuration:
+```text
+skills/<support-language>-to-<target-language>/<level>/level-policy.md
+```
+
+Current policies:
 
 ```text
 skills/zh-TW-to-pt-PT/a1/level-policy.md
+skills/zh-TW-to-en-US/b2/level-policy.md
 ```
 
 This policy may define:
@@ -266,6 +285,13 @@ For `pt-PT`:
 - preserve PT-PT clitic placement,
 - use PT-PT pronunciation guidance.
 
+For `en-US`:
+
+- use American English,
+- preserve en-US spelling and vocabulary,
+- preserve en-US punctuation, date, and number conventions,
+- use General American pronunciation guidance.
+
 Do not silently drift to another regional variety.
 
 Use the target-language reference as the authoritative internal language guide.
@@ -276,13 +302,14 @@ Use the target-language reference as the authoritative internal language guide.
 
 Use the configured support language for explanations when appropriate.
 
-For the current primary configuration:
+How much the support language is used depends on the level and is defined by
+the active CEFR and direction/level policies.
 
-```text
-zh-TW → pt-PT
-```
+For `zh-TW → pt-PT` A1, Traditional Chinese is the primary explanation
+language.
 
-use Traditional Chinese as the primary explanation language.
+For `zh-TW → en-US` B2, tasks and feedback are mainly in the target language,
+and Traditional Chinese is used for subtle explanations and the recap.
 
 The target language should still appear frequently in:
 
@@ -423,7 +450,9 @@ shared/policies/language-comparison.md
 
 Keep tasks appropriate to the active CEFR level.
 
-For A1:
+Follow the active policy in `shared/cefr/<level>.md`.
+
+For A1, for example:
 
 - use short input,
 - provide substantial scaffolding,
@@ -431,6 +460,13 @@ For A1:
 - keep production short,
 - avoid unnecessary advanced grammar,
 - prefer controlled production before open-ended output.
+
+For B2, for example:
+
+- use a connected text with a line of argument,
+- provide minimal scaffolding,
+- ask for the author's claim, a paraphrase, and a reasoned response,
+- avoid sentence-level grammar drills.
 
 The target-language source may naturally contain material above the learner's
 level.
@@ -521,17 +557,12 @@ Do not explain every unknown word automatically.
 When a direction-specific policy requires a dated learning session, follow that
 policy.
 
-For the current:
+For the current configurations, substantial practice sessions should use:
 
-```text
-zh-TW → pt-PT A1
-```
-
-substantial practice sessions should use:
-
-```text
-# YYYY-MM-DD 葡萄牙語練習記錄
-```
+| Configuration | Header |
+| --- | --- |
+| `zh-TW → pt-PT` A1 | `# YYYY-MM-DD 葡萄牙語練習記錄` |
+| `zh-TW → en-US` B2 | `# YYYY-MM-DD 英語練習記錄` |
 
 A simple standalone question does not require the full session header unless the
 interaction is clearly part of an ongoing practice session.
@@ -701,21 +732,32 @@ learn-langs-skills/
 │   │   └── session-flow.md
 │   │
 │   ├── cefr/
-│   │   └── a1.md
+│   │   ├── a1.md
+│   │   ├── a2.md
+│   │   ├── b1.md
+│   │   ├── b2.md
+│   │   ├── c1.md
+│   │   └── c2.md
 │   │
 │   └── policies/
 │       ├── source-integrity.md
 │       └── language-comparison.md
 │
 ├── languages/
-│   └── pt-PT.md
+│   ├── pt-PT.md
+│   ├── zh-TW.md
+│   └── en-US.md
 │
 ├── language-pairs/
-│   └── zh-TW__pt-PT.md
+│   ├── zh-TW__pt-PT.md
+│   └── zh-TW__en-US.md
 │
 └── skills/
-    └── zh-TW-to-pt-PT/
-        └── a1/
+    ├── zh-TW-to-pt-PT/
+    │   └── a1/
+    │       └── level-policy.md
+    └── zh-TW-to-en-US/
+        └── b2/
             └── level-policy.md
 ```
 

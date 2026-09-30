@@ -121,9 +121,9 @@ allow overwriting, delete the old version first and then upload.
 Yes. The format is the same: `SKILL.md` plus reference files.
 
 **Q: Which levels are available right now?**
-The shared policies cover A1–C2 (`shared/cefr/`), but the dedicated
-"Chinese-to-Portuguese" setup currently exists only for A1
-(`skills/zh-TW-to-pt-PT/a1/`). Other levels fall back to the shared policies.
+The shared policies cover A1–C2 (`shared/cefr/`). For which languages and
+levels have dedicated setups, see "Milestones" in the [README](../README-en.md).
+Levels without a dedicated setup fall back to the shared policies.
 
 ---
 
